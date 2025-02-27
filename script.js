@@ -63,6 +63,7 @@ function all_one_side(ele_no) {
 }
 
 function checked_fn(e) {
+
     let checked = e.target.checked;
     let parent = e.target.parentElement.parentElement;
     let child = e.target.parentElement;
@@ -81,7 +82,6 @@ function checked_fn(e) {
             });
         }
     } else {
-
         single_left.disabled = true;
         single_right.disabled = true;
         single_right.onclick = null;
@@ -90,6 +90,8 @@ function checked_fn(e) {
 }
 
 function remove_add(parent, child, id, ele_side, element) {
+    all_left.disabled = false;
+    all_right.disabled = false;
     if (!parent.contains(child)) return;
     if (!element.checked) {
 
