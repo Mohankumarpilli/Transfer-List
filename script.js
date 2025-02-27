@@ -47,7 +47,7 @@ function all_one_side(ele_no) {
             left_ul.appendChild(list);
         }
         all_left.disabled = true;
-        all_right.disabled = true;
+        all_right.disabled = false;
     } else {
         let childrenArray1 = Array.from(right_ul.children);
         childrenArray1.forEach(child => right_ul.removeChild(child));
@@ -58,8 +58,7 @@ function all_one_side(ele_no) {
             right_ul.appendChild(list);
         }
         all_right.disabled = true;
-        all_right.disabled = true;
-
+        all_left.disabled = false;
     }
 }
 
